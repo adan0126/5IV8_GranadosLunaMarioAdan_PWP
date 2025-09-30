@@ -32,3 +32,42 @@ article, aside{
 nav, footer, section{
     background-color: darkgrey;
 }
+
+footer{
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;   
+    font-weight: bold;
+    background-color: rgb(209, 30, 233);
+    border: 5px dotted rgb(11, 125, 240);
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.regresar{
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(209, 30, 233);
+    border-radius: solid rgb(11, 125, 240) 10px;
+    width: 100px;
+}
+
+.regresar a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.regresar a:hover{
+    color: yellow;
+}
