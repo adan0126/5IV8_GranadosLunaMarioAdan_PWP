@@ -51,12 +51,12 @@ function validarFormulario(formulario) {
     }*/
 
     //quiero validar que el campo edad no este vacio y acepte solo números entre 1 y 90
-    const edad = parseInt(formulario.edad.value.trim(), 10);
+    /*const edad = parseInt(formulario.edad.value.trim(), 10);
     if (isNaN(edad) || edad < 1 || edad > 90) {
         alert("Por favor ingrese una edad válida entre 1 y 90.");
         formulario.edad.focus(); // Coloca el foco en el campo edad
         return false; // Evita que el formulario se envíe
-    }
+    }*/
 
     //quiero validar que el campo edad no acepte decimales
     /*if (!Number.isInteger(edad)) {
@@ -66,12 +66,12 @@ function validarFormulario(formulario) {
     }*/
 
     //quiero validar que el campo edad no acepte letras ni caracteres especiales
-    /*const edadPattern = /^[0-9]+$/;
+    const edadPattern = /^[0-9]+$/;
     if (!edadPattern.test(formulario.edad.value.trim())) {
         alert("La edad solo debe contener números.");
         formulario.edad.focus(); // Coloca el foco en el campo edad
         return false; // Evita que el formulario se envíe
-    }*/
+    }
 
     //quiero validar que el campo email no este vacio y acepte un formato de correo válido
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
