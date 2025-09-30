@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Formulario</title>
+    <script src="./JS/validacion.js"></script>
+</head>
+<body>
+    <p>Todos los formulario en la web, manejan metodos para el envio de las diferentes peticiones que realiza el usuario, considerando la arquitectura cliente-servidor el manejo de las peticiones se hace por medio del protocolo http y actualmente por https cada peticion debe ser atendida en un tiempo de respuesta conforme al modelo de respuesta TCP/IP. Los metodos principales de los formularios son:
+        <ul>
+            <li>GET: Este metodo se encarga de enviar la informacion del formulario por medio de la salida estandar (url), esto puede propiciar a que existan inyecciones de codigo realizando violaciones a la seguridad del sistema. Este metodo se utiliza para obtener datos del servidor. Los datos enviados a traves de este metodo se anexan a la URL en forma de cadena de consulta (query string). Es adecuado para solicitudes que no modifican el estado del servidor, como busquedas o recuperacion de informacion.</li>
+            <li>POST:Este metodo se encarga de enviar la información para poder registrar un cambio o un nueo registro dentro del sistema enviandola igual por el metodo estandar pero mediante un ocultamiento Esto significa que no es visible para el usuario lo que nos ofrece un mayor grado de seguridad en el manejo de información. Este metodo se utiliza para enviar datos al servidor para su procesamiento. A diferencia de GET, los datos enviados mediante POST no se muestran en la URL, lo que lo hace mas seguro para enviar informacion sensible. Es adecuado para operaciones que modifican el estado del servidor, como la creacion o actualizacion de recursos.</li>
+        </ul>
+    </p>
+    <hr>
+    <p>En resumen los metodos son:
+        <p>En resumen los métodos son:
+            <ul>
+                <li>Get: Sirve para enviar y realizar operaciones de lectura o consulta</li>
+                <li>Post: Sirve para enviar información de un recurso al servidor, con el fin de registrarlo</li>
+                <li>Delete: Sirve para eliminar un recurso específico dentro del servidor, obteniendo una respuesta de actualización</li>
+                <li>Put: Sirve para alamcenar la información de un recurso particular y conectarse al servicio para realizar la actualización</li>
+                <li>Head: Sirve para regresar el codigo de puesta a cualquier cabecera HTTP asociado a un recurso</li>
+            </ul>
+        </p>
+    </p>
+    <div class="container-form">
+        <form method="cost" action="" id="formulario" name="formulario" onsubmit="return validarFormulario(this)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa aqui tu nombre" required>
+            <br><br>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" placeholder="Ingresa aqui tu edad" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Ingresa aqui tu email" required>
+            <br><br>
+            <input type="submit" name="enviar" value="Enviar Registro">
+            <br><br>
+            <input type="reset" name="borrar" value="Borrar Registro">
+        </form>
+    </div>
+</body>
+</html>
