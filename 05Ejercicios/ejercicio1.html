@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" method="post" name="Formulario">
+            <label for="">Formulario para calculo de inversioes Banco Kawaii con un incremento del 8.5% anual
+            </label>
+            <br><br>
+            <div class="container-tabla">
+                <table>
+                    <tr>
+                        <td>Introduce la cantidad que deseas invertir durante un año:</td>
+                        <td>
+                            <input type="text" name="cantidad" id="cantidad" onkeypress="return validarnumero(event)" class="input_text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="calcular interes" name="enviar" onclick="calcular()"></td>
+                    </tr>
+                    <tr>
+                        <td>Su saldo total con el interes es de:</td>
+                        <td><input type="text" name="sueldo" id="saldo" readonly class="input_text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="borrar datos" name="borrarTodo" onclick="borrar()" class="input_button">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+    <script src="./JS/funciones1.js"></script>
+</body>
+</html>
