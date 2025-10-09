@@ -26,6 +26,8 @@ a{
 
 a:hover{
     color: yellow;
+    font-weight: bold;
+    font-size: 21px;
 }
 
 .nombre h1{
