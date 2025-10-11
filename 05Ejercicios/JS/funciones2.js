@@ -22,7 +22,7 @@ function calcular() {
     var comision = parseoVentas * 0.1;
     var total = parseoSalario + comision;
     alert("El total de su salario es: " + total.toFixed(2) + " pesos");
-    document.getElementById("total").value = total.toFixed(2) + " pesos";
+    document.getElementById("total").value = total.toFixed(2);
 }
 
 function borrar() {
