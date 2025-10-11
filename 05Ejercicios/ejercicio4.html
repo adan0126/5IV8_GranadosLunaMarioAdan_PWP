@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <link rel="stylesheet" href="./CCS/ejercicio4.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-form">
+            <form action="" method="post" name="form">
+                <label for="" class="title-container">Formulario para calculo de Calificación Final de un Estudiante</label>
+                <div class="container-tabla">
+                    <table>
+                        <tr>
+                            <td>Calificación entre Parciales (1-100):</td>
+                            <td><input type="text" name="CalParcial" id="calParcial" class="input_text" onkeypress="return validarCal(event)"> puntos (55%)</td>
+                        </tr>
+                        <tr>
+                            <td>Calificación del Examen Final (1-100):</td>
+                            <td><input type="text" name="CalExamen" id="calExamen" class="input_text" onkeypress=" return validarCal(event)"> puntos (30%)</td>
+                        </tr>
+                        <tr>
+                            <td>Calificación del Trabajo Final (1-100):</td>
+                            <td><input type="text" name="CalProyecto" id="calProyecto" class="input_text" onkeypress=" return validarCal(event)"> puntos (15%)</td>
+                        </tr>
+                        <tr>
+                            <td>Calificación Final:</td>
+                            <td><input type="text" name="Promedio" id="promedio" class="input_text" readonly></td>
+                        <tr>
+                            <td><input type="button" value="Calcular Calificación" name="enviar datos" id="enviar datos" onclick="calcular()" class="input_button"></td>
+                            <td><input type="button" value="Borrar Datos" name="borrar datos" id="borrar datos" onclick="borrar()" class="input_button"></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+        <div class="regresar">
+            <a href="./index.html">Regresar a la página principal de ejercicios</a>
+        </div>
+    </div>
+    <script src="./JS/funciones4.js"></script>
+</body>
+</html>
