@@ -1,4 +1,4 @@
-function validarnumero(e) {
+function validarnumero(e) { // e = evento
     var teclado = (document.all) ? e.keyCode : e.which;
     if (teclado == 8) return true;
     var patron = /[0-9\d .]/;
