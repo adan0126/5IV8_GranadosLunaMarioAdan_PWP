@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="./CCS/ejercicio5.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-form">
+            <form action="" method="post" name="form">
+                <label for="" class="title-container">Formulario para calcular el porcentaje de Chicos y Chicas</label>
+                <div class="container-tabla">
+                    <table>
+                        <tr>
+                            <td>Número de Chicos:</td>
+                            <td><input type="text" name="Chicos" id="nchicos" class="input_text" onkeypress="return validarPersona(event)"></td>
+                        </tr>
+                        <tr>
+                            <td>Número de Chicas:</td>
+                            <td><input type="text" name="Chicas" id="nchicas" class="input_text" onkeypress="return validarPersona(event)"></td>
+                        </tr>
+                        <tr>
+                            <td>Porcentage de Chicos:</td>
+                            <td><input type="text" name="PorcentajeChicos" id="pchicos" class="input_text" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Porcentage de Chicas:</td>
+                            <td><input type="text" name="PorcentajeChicas" id="pchicas" class="input_text" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="Calcular Descuento" name="enviar datos" id="enviar datos" onclick="calcular()" class="input_button"></td>
+                            <td><input type="button" value="Borrar Datos" name="borrar datos" id="borrar datos" onclick="borrar()" class="input_button"></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+        <div class="regresar">
+            <a href="./index.html">Regresar a la página principal de ejercicios</a>
+        </div>
+    </div>
+    <script src="./JS/funciones5.js"></script>
+</body>
+</html>
