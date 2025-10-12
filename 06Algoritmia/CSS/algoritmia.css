@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,113,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.container{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    background-color: rgb(22, 103, 99);
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+}
+
+.problema-container{
+    background-color: rgb(0, 150, 136);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+.problema-title{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.problema-container h3{
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.problema-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+hr{
+    border: 2px solid white;
+    margin: 20px 0;
+    width: 80%;
+    opacity: 1;
+    box-shadow: 0 0 20px 5px white; /* más blur y spread */
+    /*box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.9);  sombra intensa pero más concentrada */
+    /* box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.7);  sombra moderada 
+    border: none; */
+    /* box-shadow: 
+        0 0 10px white,
+        0 0 20px white,
+        0 0 40px white;  varias capas para más brillo */
+    border-radius: 5px;
+    background: white;
+    height: 2px;
+}
+
+.problema-input{
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.problema-button{
+    padding: 10px 20px;
+    background-color: #00796B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.problema-button:hover{
+    background-color: #004D40;
+}
+
+.problema-output{
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    white-space: pre-wrap; /* Para respetar los saltos de línea */
+}
+
+.regresar{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.regresar a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    background-color: #00796B;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.regresar a:hover{
+    background-color: #004D40;
+}
