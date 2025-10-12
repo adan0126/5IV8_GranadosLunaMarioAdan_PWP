@@ -11,13 +11,12 @@
             <h2 class="problema-title">Problema 1</h2>
             <h3>Dada una lista de palabras separadas por un espacio, invierte el orden de dichas palabras, las palabras pueden estar separadas unicamente por espacio</h3>
             <div class="problema-content">
-                <input type="text" id="p1-input" class="problema-input" placeholder="Introduce las palabras separadas por espacio">
+                <input type="text" id="p1-input" class="problema-input" placeholder="Introduce las palabras separadas por espacio" onkeypress="return evento1(event)">
                 <button type="button" onclick="resolverProblema1()" class="problema-button" style="margin-top: 1rem;">Invertir Palabras</button>
                 <p id="p1-output" class="problema-output"></p>
             </div>
         </div>
-    </div>
-    <div class="container">
+        <hr>
         <div class="problema-container">
             <h2 class="problema-title">Problema 2</h2>
             <h3>Dados 2 vectores <em>v1 = (x1, x2, x3, x4, ..., xN), v2 = (y1, y2, y3, y4, ..., yN)</em> y teniendo permitido permutar el oreden de los elemntos de dicho vector, encocntrar el minimo producto escalar entre ambos vectores
@@ -90,21 +89,21 @@
                 <p id="p2-output" class="problema-output"></p>
             </div>
         </div>
-        <div class="container">
+        <hr>
         <div class="problema-container">
             <h2 class="problema-title">Problema 3</h2>
             <h3>Dada una lista de palabras separadas por una coma, encontrar la palabra que tenga más número de caracteres unicos
             <br>
             Ejemplo: CASA: 3 = (c, a, s), PERRO: 4 = (p, e, r, o), MURCIELAGO: 10 = (m, u, r, c, i, e, l, a, g, o)
             <br>
-            Considera el alfabeto A-Z las palabras deben estar en mayusculas, y deben estarseparadas por una coma, no se aceptan espacios</h3>
+            Considera el alfabeto A-Z las palabras deben estar en mayusculas, y deben estar separadas por una coma, no se aceptan espacios</h3>
             <div class="problema-content">
-                <input type="text" id="p3-input" class="problema-input" placeholder="Introduce las palabras separadas por una coma">
+                <input type="text" id="p3-input" class="problema-input" placeholder="Introduce las palabras separadas por una coma" onkeypress="return evento3(event)">
                 <button type="button" onclick="resolverProblema3()" class="problema-button" style="margin-top: 1rem;">Calcular Palabras</button>
                 <p id="p3-output" class="problema-output"></p>
             </div>
         </div>
     </div>
-    </div>
+    <script src="./JS/algoritmia.js"></script>
 </body>
 </html>
