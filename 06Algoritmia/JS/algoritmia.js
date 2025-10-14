@@ -17,6 +17,19 @@ function resolverProblema1() {
 
 function resolverProblema2() {
     // Problema 2: Producto esclar de dos vectores
+    var p2_x1 = document.querySelector("#p2-x1").value;
+    var p2_x1 = document.querySelector("#p2-x1").value;
+    var p2_x3 = document.querySelector("#p2-x3").value;
+    var p2_x4 = document.querySelector("#p2-x4").value;
+    var p2_x5 = document.querySelector("#p2-x5").value;
+    var p2_y1 = document.querySelector("#p2-y1").value;
+    var p2_y2 = document.querySelector("#p2-y2").value;
+    var p2_y3 = document.querySelector("#p2-y3").value;
+    var p2_y4 = document.querySelector("#p2-y4").value;
+    var p2_y5 = document.querySelector("#p2-y5").value;
+
+    var resultado = (p2_x1 * p2_y1) + (p2_x2 * p2_y2) + (p2_x3 * p2_y3) + (p2_x4 * p2_y4) + (p2_x5 * p2_y5);
+    document.querySelector("#p2-output").textContent = "El producto escalar de los dos vectores es: " + resultado;
 }
 
 function evento3(e){
