@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Intermedio</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="problem-content">
+            <div class="form-container">
+                <form action="" method="post" name="formulario">
+                    <label for="" class="title-container">Operaciones con Números</label>
+                    <label for="" class="description">x = y → x*y | x > y → x-y | x < y → x+y</label>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Número 1</th>
+                                <th>Número 2</th>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="entrada" id="p1-x" name="input_p1-x" onkeypress="return validarP1(event)"></td>
+                                <td><input type="text" class="entrada" id="p1-y" name="input_p1-y" onkeypress="return validarP1(event)"></td>
+                            </tr>
+                            <tr>
+                                <td>Resultado:</td>
+                                <td><input type="text" class="salida" id="p1-output" name="output_p1" readonly></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" class="cal-button" onclick="calcularP1()" value="Calcular" id="p1-calbutton" name="P1ButtonCalcular"></td>
+                                <td><input type="button" class="bor-button" onclick="borrarP1()" value="Borrar Datos" id="p1-borbutton" name="P1ButtonBorrar"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="problem-content">
+            <div class="form-container">
+                <form action="" method="post">
+                    <label for="" class="title-container">Número Mayor</label>
+                    <label for="" class="description">Se imprimirá el mayor de 3 números</label>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Número 1</th>
+                                <th>Número 2</th>
+                                <th>Número 3</th>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="entrada" id="p2-n1" name="input_p2-n1" onkeypress="return validarP2(event)"></td>
+                                <td><input type="text" class="entrada" id="p2-n2" name="input_p2-n2" onkeypress="return validarP2(event)"></td>
+                                <td><input type="text" class="entrada" id="p2-n3" name="input_p2-n3" onkeypress="return validarP2(event)"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" class="cal-button" onclick="calcularP2()" value="Calcular" id="p2-calbutton" name="P2ButtonCalcular"></td>
+                                <td><input type="text" class="salida" id="p2-output" name="output_p2" readonly placeholder="Resultado:"></td>
+                                <td><input type="button" class="bor-button" onclick="borrarP2()" value="Borrar Datos" id="p2-borbutton" name="P2ButtonBorrar"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="problem-content">
+            <div class="form-container">
+                <form action="" method="post">
+                    <label for="" class="title-container">Horas Extra</label>
+                    <label for="" class="description">Se calculara cuantó se le debe pagaran por horas extra siendo las primeras 8hrs al doble, y las posteriores al triple</label>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Salario Mensual</th>
+                                <th>Horas extra trabajadas</th>
+                                <th>Salario por hrs extra</th>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="entrada" id="p3-s" name="Salario-p3" onkeypress="return validarsalP3(event)"></td>
+                                <td><input type="text" class="entrada" id="p3-h" name="HorasExtra-p3" onkeypress="return validarhrsP3(event)"></td>
+                                <td><input type="text" class="salida" id="p3-output" name="output_p3" readonly></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" class="cal-button" onclick="calcularP3()" value="Calcular" id="p3-calbutton" name="P3ButtonCalcular"></td>
+                                <td></td>
+                                <td><input type="button" class="bor-button" onclick="borrarP3()" value="Borrar Datos" id="p3-borbutton" name="P3ButtonBorrar"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="problem-content">
+            <div class="form-container">
+                <form action="" method="post">
+                    <label for="" class="title-container">Utilidad Anual</label>
+                    <label for="" class="description">Se calculará las utilidades de un empleado según su antiguedad en la empresa (0 si es menos de un año)</label>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Salario Mensual</th>
+                                <th>Antiguedad (Años)</th>
+                                <th>Utilidad</th>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="entrada" id="p4-s" name="Salario-p4" onkeypress="return validarsalP4(event)"></td>
+                                <td><input type="text" class="entrada" id="p4-a" name="Antiguedad-p4" onkeypress="return validaranioP4(event)"></td>
+                                <td><input type="text" class="salida" id="p4-output" name="output_p4" readonly></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" class="cal-button" id="p4-calbutton" name="P4ButtonCalcular" value="Calcular" onclick="calcularP4()"></td>
+                                <td></td>
+                                <td><input type="button" class="bor-button" id="p4-borbutton" name="P4ButtonBorrar" value="Borrar Datos" onclick="borrarP4()"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="regresar">
+            <a href="../index.html">Regresar</a>
+        </div>
+    </div>
+    <script src="./funcionesintermedio.js"></script>
+</body>
+
+</html>
