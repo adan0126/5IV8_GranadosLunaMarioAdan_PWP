@@ -71,13 +71,13 @@ function mostrarCartelGanador(){
 */
 
 function intercambiarPosicionesRompe(filaPos1, columnaPos1, filaPos2, columnaPos2){
-    var pos1 = rompe[filaPos1,columnaPos1];
-    var pos2 = rompe[filaPos2, columnaPos2];
+    var pos1 = rompe[filaPos1][columnaPos1];
+    var pos2 = rompe[filaPos2][columnaPos2];
 
     //intercambio
 
-    rompe[filaPos1, columnaPos1] = pos2;
-    rompe[filaPos2, columnaPos2] = pos1;
+    rompe[filaPos1][columnaPos1] = pos2;
+    rompe[filaPos2][columnaPos2] = pos1;
 }    
 
 //crear una funcion que se encargue de saber donde esta la pieza vacia
@@ -153,18 +153,13 @@ function intercambiarPosicionesDOM(idPieza1, idPieza2){
     var pieza1 = document.getElementById(idPieza1);
     var pieza2 = document.getElementById(idPieza2);
 
-    //vamos a clonarlas
-    var padre = elementoPieza1.parentNode;
+    var padre = pieza1.parentNode;
 
-    //lo clono
+    var clonElemento1 = pieza1.cloneNode(true);
+    var clonElemento2 = pieza2.cloneNode(true);
 
-    var clonElemento1 = elementoPieza1.cloneNode(true);
-    var clonElemento2 = elementoPieza2.cloneNode(true);
-
-    //reemplazar a los padres con sus clones
-
-    padre.replaceChild(clonElemento1, elementoPieza2);
-    padre.replaceChild(clonElemento2, elementoPieza1);
+    padre.replaceChild(clonElemento1, pieza2);
+    padre.replaceChild(clonElemento2, pieza1);
 }
 
 //debo de actualizar los movs en el DOM tmb
@@ -188,14 +183,12 @@ function actualizarUltimoMovimeinto(direccion){
 
 //necesitamos poder mezclar todas las piezas
 
-function mezclarPiezas(){
+function mezclarPiezas(veces){
     if(veces <= 0){
-        alert("Asi no se puede");
         return;
     }
 
     var direcciones = [codigosDireccion.ABAJO, codigosDireccion.ARRIBA, codigosDireccion.DERECHA, codigosDireccion.IZQUIERDA];
-
     var direccion = direcciones[Math.floor(Math.random() * direcciones.length)];
 
     moverEnDireccion(direccion);
