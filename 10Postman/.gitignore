@@ -1,0 +1,34 @@
+# Dependencias de Node.js
+node_modules/
+
+# Archivos de entorno locales
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Directorios de construcción o compilación
+dist/
+build/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores de código
+.vscode/
+.idea/
+
+# Archivos temporales de npm
+package-lock.json
+yarn.lock
+
+# Coverage de tests
+coverage/
+
+# Archivos generados
+*.tgz
