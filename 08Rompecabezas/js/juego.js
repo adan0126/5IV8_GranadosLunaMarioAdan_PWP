@@ -1,3 +1,16 @@
+/*
+
+Al parecer había un error que mi mente no alcanza a comprender (ya lo solucione, era una pendejada .-.)
+Estuve viendo y había un error en los rompecabezas, ya que si abría la practica desde el repo no funcionaba
+Este error ya lo había sido arreglado antes, lo que sucedia era que por alguna razón que desconozco al momento de hacer el llamada del js al html no lo reconocia
+Esto se debía a que la carpeta donde se encontraba el js estaba en mayusculas "./JS/juego.js" en ese estado el html no lo reconocia, al inspeccionar la página aparecia el famosisimo error 404
+Como dije, para arreglar este error se cambio el nombre de la carpeta "./js/juego.js", se hicieron las respectivas pruebas, y parecia que se había arreglado
+Pero lo que no tuve en cuenta es que, el cambio d nombre había sido local, es decir, en el repo no se había hecho ese cambio, por lo que si se abría desde el repositorio, ya no funcionaba
+Como no se como cambiarle el nombre de la carpeta desde el repo, la mejor solución que se me ocurrió fue eliminar toda la parctica 8 que estaba en el repo, (no sin antes hacer una copia) y volverla a subir, esto permitiria que al momento de subirla se esta vez si se cambiara el nombre :D
+Lastima que no hice la tarea del jira, porq hubiera sido muy divertido de documentar
+
+*/
+
 var instrucciones = [
     "Utiliza las flechas de navegación para mover las piezas",
     "Para ordenar las piezas guíate por la imagen Objetivo"
