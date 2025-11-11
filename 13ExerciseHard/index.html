@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Hard - Memoization</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Memoization - Exercise Hard</h1>
+        
+        <div class="content-section">
+            <h2 class="section-title">Descripción del Ejercicio</h2>
+            <div class="description-container">
+                <p class="description-text">
+                    Este ejercicio implementa una función <strong>memoize</strong> que utiliza <strong>caché</strong> para optimizar el rendimiento 
+                    de funciones costosas. La memoización almacena los resultados de llamadas anteriores y los reutiliza 
+                    cuando se llama la función con los mismos argumentos, evitando cálculos redundantes.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">¿Qué se implementó?</h2>
+            <div class="features-container">
+                <ul class="features-list">
+                    <li><strong>Función memoize():</strong> Retorna una versión envuelta de la función original que mantiene caché</li>
+                    <li><strong>Estructura de caché con Map:</strong> Utiliza Maps anidados para guardar resultados basados en argumentos</li>
+                    <li><strong>Optimización de rendimiento:</strong> Reduce llamadas innecesarias a funciones costosas</li>
+                    <li><strong>Soporte para múltiples argumentos:</strong> Funciona con funciones que reciben varios parámetros</li>
+                    <li><strong>Manejo de objetos:</strong> Los objetos se consideran diferentes a menos que sean la misma instancia en memoria</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Captura de Pantalla - Resultado de Ejecución</h2>
+            <div class="screenshot-container">
+                <img src="./img/Captura de pantalla 2025-11-10 203038.png" alt="Resultado de ejecución del ejercicio" class="screenshot-img">
+                <p class="screenshot-description">
+                    La imagen muestra la ejecución del script en Node.js. Se pueden ver dos pruebas:
+                    <br><strong>Prueba 1:</strong> Con la función sum(), se realizaron solo 2 llamadas reales aunque se invocó 3 veces.
+                    <br><strong>Prueba 2:</strong> Con mergeObjects(), se realizaron 3 llamadas reales debido a que cada objeto {} es una instancia diferente.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Conceptos Clave</h2>
+            <div class="concepts-container">
+                <div class="concept-box">
+                    <h3>Caché</h3>
+                    <p>Almacenamiento temporal de resultados para acceso rápido</p>
+                </div>
+                <div class="concept-box">
+                    <h3>Memoización</h3>
+                    <p>Técnica de optimización que reutiliza resultados previos</p>
+                </div>
+                <div class="concept-box">
+                    <h3>Higher Order Functions</h3>
+                    <p>Funciones que reciben o retornan otras funciones</p>
+                </div>
+                <div class="concept-box">
+                    <h3>Closure</h3>
+                    <p>La función memoizada tiene acceso al cache gracias a closures</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="regresar"><a href="../index.html">Regresar</a></div>
+</body>
+</html>
