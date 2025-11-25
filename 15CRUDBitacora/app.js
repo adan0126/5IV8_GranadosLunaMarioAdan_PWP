@@ -11,9 +11,7 @@ require('dotenv').config({ path: './.env' });
 const app = express();
 const port = 3000;
 
-//------------------------------------------------------
 // CONFIGURACIÓN DE MYSQL
-//------------------------------------------------------
 
 const bd = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -30,9 +28,7 @@ bd.connect((error) => {
     }
 });
 
-//------------------------------------------------------
 // MIDDLEWARE
-//------------------------------------------------------
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -40,13 +36,10 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
-app.use(express.static(__dirname + '/public'));
+app.use('/css', express.static(__dirname + '/css'));
 
-//------------------------------------------------------
 // RUTAS CRUD PARA MANTENIMIENTO
-//------------------------------------------------------
-
-// ➤ Ruta principal: muestra registros y formulario
+// Ruta principal: muestra registros y formulario
 app.get('/', (req, res) => {
     const query = "SELECT * FROM Mantenimiento ORDER BY FechaHora DESC";
 
@@ -60,7 +53,7 @@ app.get('/', (req, res) => {
     });
 });
 
-// ➤ Crear nuevo registro
+// Crear nuevo registro
 app.post('/mantenimiento', (req, res) => {
     const { FechaHora, ID_Equipo, Fallo, Diagnostico, Correccion, Remplazo, Inactividad } = req.body;
 
@@ -84,7 +77,7 @@ app.post('/mantenimiento', (req, res) => {
     );
 });
 
-// ➤ Eliminar registro
+// Eliminar registro
 app.get('/mantenimiento/delete/:id', (req, res) => {
     const id = req.params.id;
 
@@ -100,7 +93,7 @@ app.get('/mantenimiento/delete/:id', (req, res) => {
     });
 });
 
-// ➤ Cargar datos para editar
+// Cargar datos para editar
 app.get('/mantenimiento/edit/:id', (req, res) => {
     const id = req.params.id;
 
@@ -116,7 +109,7 @@ app.get('/mantenimiento/edit/:id', (req, res) => {
     });
 });
 
-// ➤ Actualizar registro
+// Actualizar registro
 app.post('/mantenimiento/update/:id', (req, res) => {
     const id = req.params.id;
     const { FechaHora, Fallo, Diagnostico, Correccion, Remplazo, Inactividad } = req.body;
@@ -154,9 +147,7 @@ app.post('/mantenimiento/update/:id', (req, res) => {
     );
 });
 
-//------------------------------------------------------
 // SERVIDOR
-//------------------------------------------------------
 
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
