@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Registro de Mantenimiento</title>
+</head>
+<body>
+
+    <h1>Actualizar Registro de Mantenimiento</h1>
+
+    <form action="/mantenimiento/update/<%= registro.id %>" method="POST">
+
+        <!-- Fecha y Hora -->
+        <label for="FechaHora">Fecha y Hora:</label>
+        <input 
+            type="datetime-local" 
+            id="FechaHora" 
+            name="FechaHora" 
+            value="<%= registro.FechaHora.toISOString().slice(0,16) %>" 
+            required
+        >
+        <br><br>
+
+        <!-- ID Equipo -->
+        <label for="ID_Equipo">ID del Equipo:</label>
+        <input 
+            type="number" 
+            id="ID_Equipo" 
+            name="ID_Equipo" 
+            value="<%= registro.ID_Equipo %>" 
+            required
+        >
+        <br><br>
+
+        <!-- Fallo -->
+        <label for="Fallo">Fallo:</label>
+        <input 
+            type="text" 
+            id="Fallo" 
+            name="Fallo" 
+            value="<%= registro.Fallo %>" 
+            required
+        >
+        <br><br>
+
+        <!-- Diagnóstico -->
+        <label for="Diagnostico">Diagnóstico:</label>
+        <input 
+            type="text" 
+            id="Diagnostico" 
+            name="Diagnostico" 
+            value="<%= registro.Diagnostico %>" 
+            required
+        >
+        <br><br>
+
+        <!-- Corrección -->
+        <label for="Correccion">Corrección:</label>
+        <input 
+            type="text" 
+            id="Correccion" 
+            name="Correccion" 
+            value="<%= registro.Correccion %>" 
+            required
+        >
+        <br><br>
+
+        <!-- Reemplazo -->
+        <label for="Remplazo">Reemplazo:</label>
+        <select id="Remplazo" name="Remplazo" required>
+            <option value="motor" <%= registro.Remplazo === "motor" ? "selected" : "" %>>Motor</option>
+            <option value="filtro" <%= registro.Remplazo === "filtro" ? "selected" : "" %>>Filtro</option>
+            <option value="refrigeración" <%= registro.Remplazo === "refrigeración" ? "selected" : "" %>>Refrigeración</option>
+            <option value="embrague" <%= registro.Remplazo === "embrague" ? "selected" : "" %>>Embrague</option>
+            <option value="pantalla" <%= registro.Remplazo === "pantalla" ? "selected" : "" %>>Pantalla</option>
+        </select>
+        <br><br>
+
+        <!-- Inactividad -->
+        <label for="Inactividad">Tiempo de Inactividad:</label>
+        <input 
+            type="text" 
+            id="Inactividad" 
+            name="Inactividad" 
+            value="<%= registro.Inactividad %>" 
+            required
+        >
+        <br><br>
+
+        <!-- Botón -->
+        <button type="submit">Actualizar Registro</button>
+    </form>
+
+</body>
+</html>
