@@ -8,14 +8,14 @@ const cursosController = require('../Controllers/cursosControl.js');
 
 const cursosRouter = Router();
 
-// ========================= Definir cada endpoint =========================
+//definir cada endpoint
 
 cursosRouter.get('/', cursosController.getCursos);
+//necesito busqueda por id
 
-// necesitamos buscar por id
 cursosRouter.get('/:id', cursosController.getCursosByid);
 
-// post
+//post
 //cursosRouter.post('/registrar-curso', cursosController.createCurso);
 
 //put

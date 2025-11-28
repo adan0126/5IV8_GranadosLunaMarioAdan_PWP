@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos del circulo infernal</title>
+    <title>Cursos del Circulo Infernal</title>
 </head>
 <body>
-    <main class="container">
-        <table class="table" border="1">
+    <main class="container" >
+        <table class="table" border="1" >
             <thead>
                 <tr>
                     <th>ID</th>
@@ -17,25 +17,25 @@
                 </tr>
             </thead>
             <%
-                if( Array.isArray(cursos)  && cursos.length > 0 ) {
+                if(Array.isArray(cursos) && cursos.length > 0){ 
             %>
             <tbody>
                 <tr>
-                    <%
-                        cursos.forEach(function(cursos)) {
+                    <% 
+                    cursos.forEach(function(curso){
                     %>
-                    <td><%= cursos.id %></td>
-                    <td><%= cursos.nombre || '' %></td> 
-                    <td><%= cursos.descripcion || '' %></td>
-                    <td><%= cursos.docente || '' %></td>
-                    <% }; %>
+                    <td><%= curso.id %></td>   
+                    <td><%= curso.nombre || '' %></td>   
+                    <td><%= curso.descripcion || '' %></td>       
+                    <td><%= curso.docente || '' %></td>             
                 </tr>
+                <% }); %>
             </tbody>
-            <%} else { %>
-                <div> No hay cursos disponibles en este momento, existe un error al cargarlos</div>
-                <p><a href="../views/bienvenida.html">Volver a Bienvenida</a></p>
-            <% } %>
         </table>
+        <% } else { %>
+            <div> No hay cursos disponibles en este momento, existe un error al cargarlos</div>
+            <p><a href="../views/bienvenida.html">Volver a Bienvenida</a></p>
+        <% } %>npm 
     </main>
 </body>
 </html>

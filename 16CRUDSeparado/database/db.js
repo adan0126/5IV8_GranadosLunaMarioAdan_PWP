@@ -1,24 +1,19 @@
 const mysql2 = require('mysql2');
+require('dotenv').config();
 
 const db = mysql2.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'adan0126',
-    database: 'cursosdb'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 });
 
 db.connect((err) => {
     if (err) {
-        console.log('Error de conexion: ' + err.stack);    
-    }
-})
-
-db.connect((err) => {
-    if (err) {
-        console.error('Error de conexión a la base de datos:', err);
+        console.error('Error de conexion: ' + err.stack);
         return;
     }
-    console.log('Conexión exitosa a la base de datos MySQL');
+    console.log('Conectado a la base de datos MySQL');
 });
 
 module.exports = db;
