@@ -27,11 +27,12 @@ const config = mysql2.createPool({
 });
 
 config.getConnection((err) => {
-    if (err) {
-        console.error('Error de conexión a la base de datos:', err);
+    if(err){
+        console.log('Error de conexion a la base de datos', err);
         return;
-    } else {
-        console.log('Conexión a la base de datos exitosa');
-        connection.release();
-    }
+    }   
+    console.log('Conexion exitosa a la base de datos');
+    connection.release();
 });
+
+export default config;
